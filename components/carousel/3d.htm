@@ -1,0 +1,14 @@
+{% if __SELF__.carousel.images %}
+    <div class="carousel-slider">
+        <carousel-3d v-cloak :width="{{ width }}" :height="{{ height }}" :autoplay-timeout="3000" :autoplay="false" :autoplay-hover-pause="true" :animation-speed="1000">
+            {% for photo in __SELF__.carousel.images%}
+            <slide :index="{{loop.index0}}">
+                <img class="carousel-image"
+                     alt="Image Caption"
+                     src="{{ photo.getThumb(width, height, {'mode': 'crop'}) }}"
+                >
+            </slide>
+            {% endfor %}
+        </carousel-3d>
+    </div>
+{% endif %}

@@ -1,0 +1,9 @@
+<div class="panorama">
+    {% set image = __SELF__.carousel.images|first %}
+    <img src="{{ image.path }}">
+</div>
+<div class="panorama__desc">
+    <svg class="slider__panorama-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-left"></use></svg>
+    перетяни вправо/влево
+    <svg class="slider__panorama-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>
+</div>

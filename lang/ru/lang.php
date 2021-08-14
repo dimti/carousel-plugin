@@ -39,10 +39,10 @@ return [
     'components' => [
         'properties' => [
             'width' => [
-                'title' => 'Width',
+                'title' => 'Ширина картинки',
             ],
             'height' => [
-                'title' => 'Height',
+                'title' => 'Высота картинки',
             ],
         ],
     ],

@@ -1,0 +1,25 @@
+{
+    "name": "mohsin/carousel-plugin",
+    "type": "october-plugin",
+    "description": "Mohsin carousel plugin archive version",
+    "keywords": [
+        "october",
+        "cms",
+        "rest",
+        "plugin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Demidov",
+            "email": "demidov@dimti.ru"
+        },
+        {
+            "name": "Saifur Rahman Mohsin",
+            "homepage": "https://github.com/SaifurRahmanMohsin"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

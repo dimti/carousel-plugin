@@ -22,23 +22,33 @@ class Carousel extends ComponentBase
     public function defineProperties()
     {
         return [
-          'id' => [
-            'title'        => 'mohsin.carousel::lang.settings.name',
-            'description'  => 'mohsin.carousel::lang.settings.choice',
-            'type'         => 'dropdown'
+            'id' => [
+                'title'       => 'mohsin.carousel::lang.settings.name',
+                'description' => 'mohsin.carousel::lang.settings.choice',
+                'type'        => 'dropdown'
             ],
-          ];
+            'width' => [
+                'title'     => 'mohsin.carousel::lang.components.properties.width.title',
+                'default'   => 260
+            ],
+            'height' => [
+                'title'     => 'mohsin.carousel::lang.components.properties.height.title',
+                'default'   => 150
+            ],
+        ];
     }
 
-    public function getidOptions()
+    public function getIdOptions()
     {
-        return CarouselModel::select('id', 'name') -> orderBy('name') -> get() -> lists('name', 'id');
+        return CarouselModel::select('id', 'name')->orderBy('name')->get()->lists('name', 'id');
     }
 
     public function onRun()
     {
         $carousel = new CarouselModel;
-        $this -> carousel = $carousel -> where('id', '=', $this -> property('id')) -> first();
+        $this->carousel = $carousel->where('id', '=', $this->property('id'))->first();
+        $this->page['width'] = $this->property('width');
+        $this->page['height'] = $this->property('height');
     }
 
 }
